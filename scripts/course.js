@@ -9,3 +9,7 @@ const coures =[
 ]
 
 const courseTable = document.getElementById("#course-contenair");
+
+function displayCourses(CourseArray){
+    container.innerHTML = "";
+}
