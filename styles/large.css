@@ -165,28 +165,38 @@ footer img{
 
 /* hamburger */
 
-/* === MENU HAMBURGER STYLE === */
 #menu {
-  font-size: 2rem;
-  color: var(--accent-color);
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: none; /* caché sur grand écran */
-  transition: transform 0.3s ease, color 0.3s ease;
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+    font-size: 2rem;
+    color: var(--accent-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* caché sur grand écran */
+    transition: transform 0.3s ease, color 0.3s ease;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
 }
 
 #menu:hover {
-  color: var(--muted);
-  transform: scale(1.1);
+    color: var(--muted);
+    transform: scale(1.1);
 }
 
 /* Nav par défaut (bureau) */
 .nav-bar ul {
-  display: flex;
-  list-style-type: none;
-  gap: 1.5rem;
+    display: flex;
+    list-style-type: none;
+    gap: 1.5rem;
+}
+
+#extra ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#extra ul a {
+    text-decoration: none;
+    color: var(--text-color-accent);
 }
