@@ -60,4 +60,10 @@
     .control .btn-filter {
         width: 80%;
     }
+
+    footer img {
+        width: 30px;
+        height: auto;
+        margin: 0 5px;
+    }
 }

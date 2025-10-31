@@ -200,3 +200,44 @@ footer img{
     text-decoration: none;
     color: var(--text-color-accent);
 }
+
+/* Filter */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.course-card {
+    background-color: #f8f9fa;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease;
+}
+
+.course-card:hover {
+    transform: scale(1.02);
+}
+
+.course-card.completed {
+    border-color: var(--accent-color);
+    background-color: #e8f7ed;
+}
+
+.btn-filter {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+
+.btn-filter:hover {
+    background-color: #005fa3;
+}
