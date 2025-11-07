@@ -1,0 +1,71 @@
+[
+    {
+        "name": "Hotel of the Congo",
+        "address": "Street Nganga Edouard, Dolisie",
+        "phone": "+242 06 111 2233",
+        "website": "https://hotelducongo.cg",
+        "image": "hotel.jpeg",
+        "membership": 3,
+        "description": "A leading hotel in Dolisie offering quality accommodation and dining."
+    },
+
+    {
+        "name": "Soleil Bakery",
+        "address": "Street Mbochi, Dolisie",
+        "phone": "+242 06 222 3344",
+        "website": "https://boulangeriesoleil.cg",
+        "image": "bakery.jpeg",
+        "membership": 1,
+        "description": "Fresh bread and local pastries every morning."
+    },
+
+    {
+        "name": "Nzila Garage",
+        "address": "Sibiti Road, Dolisie",
+        "phone": "+242 06 333 4455",
+        "website": "https://garagenzila.cg",
+        "image": "garage.jpeg",
+        "membership": 2,
+        "description": "Automotive maintenance and repair."
+    },
+
+    {
+        "name": "Loango Bank",
+        "address": "Lumumba Boulevard, Dolisie",
+        "phone": "+242 06 444 5566",
+        "website": "https://banqueloango.cg",
+        "image": "bank.jpeg",
+        "membership": 3,
+        "description": "Regional bank offering modern financial services."
+    },
+
+    {
+        "name": "Mayombe Agricultural Cooperative",
+        "address": "Tshela Quarter, Dolisie",
+        "phone": "+242 06 555 6677",
+        "website": "https://coopmayombe.cg",
+        "image": "agri.jpeg",
+        "membership": 2,
+        "description": "Production and distribution of organic agricultural products."
+    },
+
+    {
+        "name": "Studio Dolisie Vision",
+        "address": "City center, Dolisie",
+        "phone": "+242 06 666 7788",
+        "website": "https://dolisievision.cg",
+        "image": "studio.jpeg",
+        "membership": 1,
+        "description": "Professional photo and video studio."
+    },
+
+    {
+        "name": "Restaurant Le Baobab",
+        "address": "Avenue de l’Indépendance, Dolisie",
+        "phone": "+242 06 777 8899",
+        "website": "https://baobab.cg",
+        "image": "resto.jpeg",
+        "membership": 2,
+        "description": "Congolese and international cuisine in a warm and inviting setting.."
+    }
+]
