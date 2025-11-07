@@ -132,6 +132,17 @@ main{
     margin: 0.5rem 0;
 }
 
+.member-card p{
+    color: var(--primary-color);
+    
+}
+
+.member-card a{
+    color: #000000;
+    font-style: italic;
+    
+}
+
 /* hero */
 
 .hero {
@@ -208,88 +219,6 @@ footer p {
     gap: 1rem;
     margin: 30px;
    
-   
 }
 
 
-
-
-.member-card:hover {
-    transform: scale(1.03);
-    transition: transform 0.3s ease;
-}
-
-
-/* Affichage mobile */
-@media (max-width: 768px) {
-   
-
-      /* cacher le menu au départ */
-    .nav-bar ul {
-        position: absolute;
-        display: none;
-        flex-direction: column;
-        background-color: var(--primary-color);
-        width: 25%;
-        height: auto;
-        padding: 1rem 5px;
-        margin: 1rem 5px;
-        border-radius: 20px;
-
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    #menu {
-        display: block;
-        z-index: 1001;
-        color: var(--text-color);
-    }
-
-    header {
-        flex-wrap: wrap;
-    }
-
-
-    /* cacher le menu au départ */
-    .nav-bar ul {
-        display: none;
-        flex-direction: column;
-        background-color: var(--primary-color);
-        width: 25%;
-        height: auto;
-        padding: 1rem 5px;
-        margin: 1rem 5px;
-
-    }
-
-    /* quand on clique sur ☰ */
-    .nav-bar.show ul {
-        display: flex;
-    }
-
-    nav ul li a {
-        font-size: 1.1rem;
-        padding: 0.5rem;
-        border-bottom: 1px solid var(--text-color);
-    }
-
-    .footer-link {
-        width: 25%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1rem;
-        margin: 1px;
-    }
-    
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-
-    
-   
-}
