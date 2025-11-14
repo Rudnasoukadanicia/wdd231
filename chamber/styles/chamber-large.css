@@ -54,6 +54,17 @@
         text-align: center;
     }
 
+    /* === */
+
+    
+    .hero-image {
+        height: auto;
+    }
+    .hero-text {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
 
     
    

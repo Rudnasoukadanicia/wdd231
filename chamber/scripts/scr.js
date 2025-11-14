@@ -1,21 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-    // date
+    // Footer dynamique
     document.getElementById("currentYear").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+    document.getElementById("lastModified").textContent = `Dernière modification : ${document.lastModified}`;
 
-    // Menu Humberger
-    const nemubutton = document.querySelector("#menu");
+    // Menu hamburger
+    const menuButton = document.querySelector("#menu");
     const navbar = document.querySelector(".nav-bar");
 
-    if (nemubutton && navbar) {
-        nemubutton.addEventListener("click", () => {
+    if (menuButton && navbar) {
+        menuButton.addEventListener("click", () => {
             navbar.classList.toggle("show");
-            nemubutton.textContent = nemubutton.textContent === "☰" ? "✖" : "☰";
+            menuButton.textContent = menuButton.textContent === "☰" ? "✖" : "☰";
         });
     }
 
-    // Spotlight members
+    // Spotlights
     async function loadMembers() {
         try {
             const response = await fetch('data/members.json');
@@ -32,17 +31,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 card.classList.add("spotlight-card");
 
                 card.innerHTML = `
-                    <img src="images/${member.image}" alt="${member.name}">
+                    images/${member.image}
                     <h3>${member.name}</h3>
                     <p>${member.address}</p>
                     <p>${member.phone}</p>
-                    <a href="${member.website}" target="_blank">Visit the site</a>
-                    <p><strong>Level:</strong> ${getMembershipLevel(member.membership)}</p>
+                    ${member.website}Visiter le site</a>
+                    <p><strong>Niveau :</strong> ${getMembershipLevel(member.membership)}</p>
                 `;
                 container.appendChild(card);
             });
         } catch (error) {
-            console.error("Error loading JSON:", error);
+            console.error("Erreur chargement JSON :", error);
         }
     }
 
@@ -54,10 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
             default: return "Membre";
         }
     }
+
     loadMembers();
 
-    // weather
-    const apiKey = "bdcdca724f45450a27defe8058ff8bb5"; 
+    // Météo
+    const apiKey = "bdcdca724f45450a27defe8058ff8bb5";
     const lat = -4.2;
     const lon = 12.6667;
     const units = "metric";
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function getWeather() {
         try {
-            // meteo actuelle
+            // Météo actuelle
             const response = await fetch(weatherURL);
             const data = await response.json();
 
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             tempElement.textContent = `${temperature}°C`;
             descElement.textContent = description.charAt(0).toUpperCase() + description.slice(1);
 
-            // prévisions
+            // Prévisions
             const forecastResponse = await fetch(forecastURL);
             const forecastData = await forecastResponse.json();
 
@@ -97,10 +97,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 const des = day.weather[0].description;
 
                 const card = document.createElement("div");
-                card.classList.add("forecast-card");
+                card.classList.add("forecast-day");
 
                 card.innerHTML = `
-                    <p><strong>${date.toLocaleDateString("en-GB", { weekday: "short" })}</strong></p>
+                    <p><strong>${date.toLocaleDateString("fr-FR", { weekday: "short" })}</strong></p>
                     <p>${temp} °C</p>
                     <p>${des}</p>
                 `;
@@ -109,16 +109,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const sourceNote = document.createElement("p");
             sourceNote.classList.add("small");
-            sourceNote.textContent = "Data provided by OpenWeatherMap.";
+            sourceNote.textContent = "Données fournies par OpenWeatherMap.";
             forecastContainer.appendChild(sourceNote);
 
         } catch (error) {
-            console.error("Error fetching weather data:", error);
+            console.error("Erreur météo :", error);
             tempElement.textContent = "-- °C";
-            descElement.textContent = "Weather unavailable";
+            descElement.textContent = "Météo indisponible";
         }
     }
 
     getWeather();
-
 });
