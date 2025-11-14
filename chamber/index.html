@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Directory of companies that are members of the Dolisie Chamber of Commerce. Discover the key players in the local economy.">
+    <meta name="description" content="Dolisie Chamber of Commerce — supporting local businesses, news, events and member directory.">
     <meta name="author" content="Ruda Danicia Souka">
-    <title>Dolisie Chamber of Commerce Directory</title>
+    <title>Home | Dolisie Chamber of Commerce Directory</title>
 
     <!-- open graph -->
-    <meta property="og:title" content="Dolisie Chamber of Commerce Directory">
-    <meta property="og:description" content="Discover the key players in Dolisie's local economy with our comprehensive directory of chamber members.">
+    <meta property="og:title" content="Home | Dolisie Chamber of Commerce Directory">
+    <meta property="og:description" content="News, events and businesses directory of the Dolisie Chamber of Commerce.">
     <meta property="og:image" content="https://rudnasoukadanicia.github.io/wdd231/chamber/images/og-image.jpg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rudnasoukadanicia.github.io/wdd231/chamber/directory.html">
@@ -23,11 +23,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
     <!-- link of cs -->
-    <link rel="stylesheet" href="styles/chamber.css">
-    <link rel="stylesheet" href="styles/chamber-large.css">
+    <link rel="stylesheet" href="./styles/chamber.css">
+    <link rel="stylesheet" href="./styles/chamber-large.css">
     
     <!-- link of js-->
-    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/chamber-home.js" defer></script>
      
     
 </head>
@@ -43,7 +43,7 @@
          
         <nav class="nav-bar">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Home</a></li>
                 <li><a href="directory.html" class="active">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Discover</a></li>
@@ -59,21 +59,43 @@
 
         <section class="hero">
             <img src="images/hero.jpeg" alt="Panoramic view of Dolisie city center" class="hero-image">
+            <div class="hero-text">
+                <h3>Welcome to Dolisie Chamber of Commerce</h3>
+                <a href="join.html" class="cta">Join today</a>  <!-- future  page-->
+            </div>
         </section>
 
 
-        <section id="directory">
-            <!-- view toggle -->
-            <div class="view">
-                <button id="grid-view">Grid view</button>
-                <button id="list-view">List view</button>
+        <section id="events" class="contenair">
+            <h2>Currents events</h2>
+            <ul id="list-events">
+                <li>Monthly Business Networking -Nov 25</li>
+                <li>Local Market Day - Dec  10</li>
+                <li>Entrepreneurs Foreum - Jan 7</li>
+            </ul>
+        </section>
+
+        <section id="weather" class="contenair">
+            <h2>Weather of Dolisie </h2>
+            <div id="weather-info">
+                <!-- Weather information will be populated here by JavaScript -->
+                <p id="weather-temp">-- °C</p>
+                <p id="weather-desc">Loading...</p>
+
             </div>
 
-            <div id="members" class="grid-view">
-                <!-- Members will be dynamically inserted here by chamber.js -->
+            <div id="forcast" class="forcast-grid">
+                <!-- Forecast information will be populated here by JavaScript -->
+                <p class="small">Data provided by OpenWeatherMap.</p>
             </div>
 
-            
+        </section>
+
+        <section id="spotlights" class="container">
+            <h2> Member Spotlights</h2>
+            <div id="spotlight-container" class="grid-view">
+                <!-- 2-3 golder/silver cards inserted by js -->
+            </div>
         </section>
     </main>
 

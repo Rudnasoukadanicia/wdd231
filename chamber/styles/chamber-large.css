@@ -30,19 +30,6 @@
         flex-wrap: wrap;
     }
 
-
-    /* cacher le menu au départ */
-    .nav-bar ul {
-        display: none;
-        flex-direction: column;
-        background-color: var(--primary-color);
-        width: 25%;
-        height: auto;
-        padding: 1rem 5px;
-        margin: 1rem 5px;
-
-    }
-
     /* quand on clique sur ☰ */
     .nav-bar.show ul {
         display: flex;

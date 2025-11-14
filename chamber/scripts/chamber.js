@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // --- Display the data of the modified ---
+
     document.getElementById("currentYear").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = `The last Modifed date is: ${document.lastModified}`
+
+    // button humberger
+
     const menubutton = document.querySelector("#menu");
     const navbar = document.querySelector(".nav-bar");
 
@@ -12,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+
+        // Use Json
     
         async function loadMembers() {
         try{
@@ -26,6 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
         
     }
 
+    //  add the members information by js
+    
     function displayMembers(members){
         const contenair = document.getElementById('members');
         contenair.innerHTML = '';
@@ -69,10 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
         membersContainer.classList.add('list-view');
         membersContainer.classList.remove('grid-view');
     });
-
-    // --- Affichage de la date et de l’année ---
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
+    
 
     // --- Exécution ---
     loadMembers();

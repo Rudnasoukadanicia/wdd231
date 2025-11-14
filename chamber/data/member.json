@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Congo Telecom",
+    "address": "Avenue Marien Ngouabi, Dolisie",
+    "phone": "+242 06 111 2222",
+    "website": "https://congotelecom.cg",
+    "image": "images/congotelecom.webp",
+    "membership": "Gold"
+  },
+  {
+    "name": "Boulangerie Soleil",
+    "address": "Rue du Marché, Dolisie",
+    "phone": "+242 06 333 4444",
+    "website": "https://boulangeriesoleil.cg",
+    "image": "images/boulangerie.webp",
+    "membership": "Silver"
+  },
+  {
+    "name": "Banque de Dolisie",
+    "address": "Place de la République, Dolisie",
+    "phone": "+242 06 777 8888",
+    "website": "https://banquedolisie.cg",
+    "image": "images/banque.webp",
+    "membership": "Gold"
+  }
+]
