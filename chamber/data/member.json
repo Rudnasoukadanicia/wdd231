@@ -1,26 +1,32 @@
 [
-  {
-    "name": "Congo Telecom",
-    "address": "Avenue Marien Ngouabi, Dolisie",
-    "phone": "+242 06 111 2222",
-    "website": "https://congotelecom.cg",
-    "image": "images/congotelecom.webp",
-    "membership": "Gold"
-  },
-  {
-    "name": "Boulangerie Soleil",
-    "address": "Rue du Marché, Dolisie",
-    "phone": "+242 06 333 4444",
-    "website": "https://boulangeriesoleil.cg",
-    "image": "images/boulangerie.webp",
-    "membership": "Silver"
-  },
-  {
-    "name": "Banque de Dolisie",
-    "address": "Place de la République, Dolisie",
-    "phone": "+242 06 777 8888",
-    "website": "https://banquedolisie.cg",
-    "image": "images/banque.webp",
-    "membership": "Gold"
-  }
+   {
+        "name": "Soleil Bakery",
+        "address": "Street Mbochi, Dolisie",
+        "phone": "+242 06 222 3344",
+        "website": "https://boulangeriesoleil.cg",
+        "image": "bakery.jpeg",
+        "membership": 1,
+        "description": "Fresh bread and local pastries every morning."
+    },
+
+    {
+        "name": "Nzila Garage",
+        "address": "Sibiti Road, Dolisie",
+        "phone": "+242 06 333 4455",
+        "website": "https://garagenzila.cg",
+        "image": "garage.jpeg",
+        "membership": 2,
+        "description": "Automotive maintenance and repair."
+    },
+
+    {
+        "name": "Loango Bank",
+        "address": "Lumumba Boulevard, Dolisie",
+        "phone": "+242 06 444 5566",
+        "website": "https://banqueloango.cg",
+        "image": "bank.jpeg",
+        "membership": 3,
+        "description": "Regional bank offering modern financial services."
+    }
+
 ]
