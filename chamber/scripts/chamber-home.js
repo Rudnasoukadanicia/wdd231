@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadMembers();
 
     // weather
-    const apiKey = "bdcdca724f45450a27defe8058ff8bb5"; 
+    const apiKey = "53c29ede4a76b9165286e746594971b6"; 
     const lat = -4.2;
     const lon = 12.6667;
     const units = "metric";

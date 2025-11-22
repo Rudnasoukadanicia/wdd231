@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dolisie Chamber of Commerce — supporting local businesses, news, events and member directory.">
+    <meta name="author" content="Ruda Danicia Souka">
+    <title>Join | Dolisie Chamber of Commerce Directory</title>
+
+    <!-- open graph -->
+    <meta property="og:title" content="Join | Dolisie Chamber of Commerce Directory">
+    <meta property="og:description" content="Current homepage, weather events and business directory of the Dolisie Chamber of Commerce.">
+    <meta property="og:image" content="https://rudnasoukadanicia.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rudnasoukadanicia.github.io/wdd231/chamber/thankyou.html">
+
+    <!-- Icon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- link of fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- link of cs -->
+    <link rel="stylesheet" href="./styles/chamber.css">
+    <link rel="stylesheet" href="./styles/chamber-large.css">
+    
+    <!-- link of js-->
+    <script src="scripts/chamber-home.js" defer></script>
+     
+    
+</head>
+<body>
+  <!-- header same as others -->
+  <header>
+    <div class="logo">
+      <img src="images/hero.jpeg" alt="Dolisie Chamber logo" width="60">
+      <h1>Dolisie Chamber of Commerce</h1>
+    </div>
+    <nav class="nav-bar" role="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+    <button id="menu" aria-label="Toggle navigation menu">☰</button>
+  </header>
+
+  <main>
+    <section class="thanks">
+      <h2>Thank you for your application!</h2>
+      <p>We appreciate your interest. Below is the information you submitted:</p>
+
+      <div class="summary" id="summary">
+        <!-- JS will populate required fields here: firstname, lastname, email, phone, orgname, timestamp -->
+      </div>
+
+      <p>We will review your application and contact you soon.</p>
+      <p><a href="index.html">Return to Home</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-meta">
+      <p>&copy; <span id="currentYear"></span> Dolisie Chamber</p>
+    </div>
+  </footer>
+
+  
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dolisie Chamber of Commerce — supporting local businesses, news, events and member directory.">
+    <meta name="author" content="Ruda Danicia Souka">
+    <title>Join| Dolisie Chamber of Commerce Directory</title>
+
+    <!-- open graph -->
+    <meta property="og:title" content="Join | Dolisie Chamber of Commerce Directory">
+    <meta property="og:description" content="Current homepage, weather events and business directory of the Dolisie Chamber of Commerce.">
+    <meta property="og:image" content="https://rudnasoukadanicia.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rudnasoukadanicia.github.io/wdd231/chamber/join.html">
+
+    <!-- Icon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- link of fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- link of cs -->
+    <link rel="stylesheet" href="./styles/chamber.css">
+    <link rel="stylesheet" href="./styles/chamber-large.css">
+    
+    <!-- link of js-->
+    <script src="scripts/chamber-join.js" defer></script>
+     
+    
+</head>
+<body>
+  <!-- header nav / logo same as other pages -->
+  <header>
+    <div class="logo">
+      <img src="images/hero.jpeg" alt="Dolisie Chamber logo" width="60">
+      <h1>Dolisie Chamber of Commerce</h1>
+    </div>
+    <nav class="nav-bar" role="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" aria-current="page">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+    <button id="menu" aria-label="Toggle navigation menu">☰</button>
+  </header>
+
+  <main class="join-main">
+    <section class="form-section">
+      <!-- FORM (method GET to thankyou.html) -->
+      <form class="join-form" method="get" action="thankyou.html" id="joinForm" novalidate>
+        <h2>Membership Application</h2>
+
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname" title="First name" required autocomplete="given-name" />
+        
+        <label for="lastname">Last name</label>
+        <input type="text" name="lastname" id="lastname" title="Last name" required autocomplete="family-name" />
+        
+        <label for="orgtitle">Organizational title</label>
+        <input type="text" name="orgtitle" id="orgtitle" title="Organization title (only letters, hyphens and spaces, min 7 chars)" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\- ]{7,}$" autocomplete="organization-title" placeholder="e.g. Operations Manager" />
+      
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" title="Email address" required autocomplete="email" placeholder="you@example.com" />
+        
+        <label for="phone">Mobile phone</label>
+        <input type="tel" name="phone" id="phone" title="Mobile phone number" required autocomplete="tel" placeholder="+242 06 123 4567" />
+        
+        <label for="orgname">Business / Organization name</label>
+        <input type="text" name="orgname" id="orgname" title="Organization name" required autocomplete="organization" />
+        
+        <fieldset >
+          <legend >Membership level (required)</legend>
+
+          <!-- using radio buttons for accessibility -->
+          <label>
+            <input type="radio" name="level" value="np" required> NP Membership (non-profit, no fee)
+          </label>
+          <label>
+            <input type="radio" name="level" value="bronze"> Bronze Membership
+          </label>
+          <label>
+            <input type="radio" name="level" value="silver"> Silver Membership
+          </label>
+          <label>
+            <input type="radio" name="level" value="gold"> Gold Membership
+          </label>
+        </fieldset>
+
+        <label for="description">Business / Organization description</label>
+        <textarea name="description" id="description" title="A short description of the business"></textarea>
+      
+        <!-- hidden timestamp that contains load time -->
+        <input type="hidden" name="timestamp" id="timestamp">
+
+        <div class="submit-row">
+          <input type="submit" value="Apply to join">
+          <small >We will contact you after review.</small>
+        </div>
+      </form>
+
+      <!-- Membership Level Cards -->
+      <aside class="membership-cards" aria-label="Membership cards">
+        <div class="membership-card" data-level="np">
+          <h3>NP Membership</h3>
+          <p>No fee for non-profit organizations.</p>
+          <a href="#" data-modal-target="modal-np">More info</a>
+        </div>
+
+        <div class="membership-card" data-level="bronze">
+          <h3>Bronze Membership</h3>
+          <p>Affordable entry-level benefits and listing.</p>
+          <a href="#" data-modal-target="modal-bronze">More info</a>
+        </div>
+
+        <div class="membership-card" data-level="silver">
+          <h3>Silver Membership</h3>
+          <p>Includes spotlight and event discounts.</p>
+          <a href="#" data-modal-target="modal-silver">More info</a>
+        </div>
+
+        <div class="membership-card" data-level="gold">
+          <h3>Gold Membership</h3>
+          <p>Premium visibility and premium benefits.</p>
+          <a href="#" data-modal-target="modal-gold">More info</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Modals (hidden by default) -->
+  <div id="modal-np" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modal-np-title">
+    <div class="modal-dialog">
+      <button class="modal-close" data-modal-close aria-label="Close dialog">✖</button>
+      <h3 id="modal-np-title">NP Membership - Non-profit</h3>
+      <p>Benefits: free listing, access to networking events, volunteer promotion.</p>
+    </div>
+  </div>
+
+  <div id="modal-bronze" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modal-bronze-title">
+    <div class="modal-dialog">
+      <button class="modal-close" data-modal-close aria-label="Close dialog">✖</button>
+      <h3 id="modal-bronze-title">Bronze Membership</h3>
+      <p>Benefits: basic listing, newsletter mention, event discounts.</p>
+    </div>
+  </div>
+
+  <div id="modal-silver" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modal-silver-title">
+    <div class="modal-dialog">
+      <button class="modal-close" data-modal-close aria-label="Close dialog">✖</button>
+      <h3 id="modal-silver-title">Silver Membership</h3>
+      <p>Benefits: spotlight on home page (rotating), free workshop seats, ad discounts.</p>
+    </div>
+  </div>
+
+  <div id="modal-gold" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modal-gold-title">
+    <div class="modal-dialog">
+      <button class="modal-close" data-modal-close aria-label="Close dialog">✖</button>
+      <h3 id="modal-gold-title">Gold Membership</h3>
+      <p>Benefits: prime spotlight position, premium promotions, priority invites.</p>
+    </div>
+  </div>
+
+  <!-- footer (same pattern as other pages) -->
+  <footer>
+    <div class="footer-info">
+      <p>Dolisie Chamber of Commerce</p>
+      <p>1010 Rue de la Paix, Dolisie</p>
+    </div>
+    <div class="footer-link">
+      <a href="#"><img src="images/youtube.svg" alt="YouTube"></a>
+      <a href="#"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+      <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
+    </div>
+    <div class="footer-meta">
+      <p>&copy; <span id="currentYear"></span> Dolisie Chamber</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+  <!-- scripts -->
+  <script src="scripts/join.js" defer></script>
+</body>
+</html>
