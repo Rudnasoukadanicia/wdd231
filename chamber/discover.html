@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dolisie Chamber of Commerce — supporting local businesses, news, events and member directory.">
+    <meta name="author" content="Ruda Danicia Souka">
+    <title>Discover | Dolisie Chamber of Commerce Directory</title>
+
+    <!-- open graph -->
+    <meta property="og:title" content="Discover | Dolisie Chamber of Commerce Directory">
+    <meta property="og:description" content="Current homepage, weather events and business directory of the Dolisie Chamber of Commerce.">
+    <meta property="og:image" content="https://rudnasoukadanicia.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rudnasoukadanicia.github.io/wdd231/chamber/discover.html">
+
+    <!-- Icon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- link of fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- link of cs -->
+    <link rel="stylesheet" href="./styles/chamber.css">
+    <link rel="stylesheet" href="./styles/chamber-large.css">
+    
+    <!-- link of js-->
+    <script type="module" src="scripts/discover.js"></script>
+
+     
+    
+</head>
+<body>
+    <!-- start header -->
+    <header>
+        <!-- logo -->
+        <div class="logo">
+            <img src="images/logo.webp" alt="logo of this site" width="60">
+            <h1>Dolisie Chamber of Commerce</h1>
+        </div>
+        <!-- naviagation -->
+         
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+        <!-- button hamberger -->
+        <button id="menu" aria-label="Toggle navigation menu">☰</button>
+    </header>
+
+    <!-- end header -->
+
+    <main class="discover-main">
+        <section class="intro">
+            <h2>Discover Dolisie</h2>
+            <p>Explore the top places , culture, and attractions that make dolisie a great place to live
+                visit ,and do business. From historical landmarks to local events , discover all that
+                dolisie has to offer.
+            </p>
+            <div id="visitMessage" class="visitMessage" role="status" aria-live="polite"></div>
+        </section>
+
+        <section id="placesGrid" class="placesGrid" aria-label="Places of interest">
+            <!-- JS will populate place cards here -->
+
+        </section>
+        
+    </main >
+
+    <footer>
+        <div class="footer-info">
+            <p>Dolisie Chamber of Commerce</p>
+            <p>1010 Rue de la Paix, Dolisie, Congo</p>
+            <p>Email : info@dolisiechamber.org | Téléphone : +242 06 123 4567</p>
+        </div>
+
+        <div class="footer-link">
+            <a href="https://youtube.com/" target="_blank"><img src="images/youtube.svg" alt="logo-youtube picture"></a>
+            <a href="https://www.linkedin.com/in/rudna-souka-424169338/"><img src="images/linkedin.svg" alt="logo-linkedin picture"></a>
+            <a href="https://www.twitter.com/"><img src="images/twitter.svg" alt="logo-twitter picture"></a>
+        </div>
+
+        <div class="footer-meta">
+            <p>WDD231 Class Project</p>
+            <p>Rudna Danicia Souka</p>
+            
+            <p>&copy;<span id="currentYear"></span> Rudna Danicia Souka - Rep of Congo</p>
+            <p id="lastModified"></p>
+        
+
+        </div>
+    </footer>
+</body>
+</html>

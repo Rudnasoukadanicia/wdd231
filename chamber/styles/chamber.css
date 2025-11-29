@@ -477,3 +477,73 @@ fieldset{
     border: none;
 }
 
+/* ===discover=== */
+
+
+.discover-main {
+    max-width: 1200px;
+    margin: 1.5rem auto;
+    padding: 1rem;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.visitMessage {
+    margin-top: 1rem;
+    font-style: italic;
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.placesGrid {
+    display: grid;
+    gap: 1.5rem;
+    align-items: start;
+    grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g"
+        "h";
+}
+
+
+
+.place-card {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--text-color);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.place-card[data-area="a"] { grid-area: a; }
+.place-card[data-area="b"] { grid-area: b; }
+/* ... jusqu'à h */
+
+.place-card figure img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.learn{
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+}
+

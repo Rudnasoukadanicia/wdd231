@@ -69,3 +69,41 @@
     
    
 }
+
+@media (min-width: 641px) {
+    .place-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 26px rgba(0,0,0,0.2);
+    }
+    .place-card figure img:hover {
+        transform: scale(1.06);
+        filter: contrast(1.05) saturate(1.05);
+    }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .placesGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .placesGrid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "a b"
+            "c d"
+            "e f"
+            "g h";
+    }
+}
+
+@media (min-width: 1025px) {
+    .placesGrid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "a b c d"
+            "e f g h";
+    }
+}
