@@ -12,7 +12,7 @@
     <meta property="og:description" content="Current homepage, weather events and business directory of the Dolisie Chamber of Commerce.">
     <meta property="og:image" content="https://rudnasoukadanicia.github.io/wdd231/finalproject/images/og-image.jpg">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rudnasoukadanicia.github.io/wdd231/finalproject/index.html">
+    <meta property="og:url" content="https://rudnasoukadanicia.github.io/wdd231/finalproject/about.html">
 
     <!-- Icon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -59,63 +59,79 @@
     <!-- Main contenue -->
 
     <main>
-
         <!-- section hero -->
-        <section class="hero-section">
-            <div class="hero-header">
-                <h2>Welcome to <strong>The Delice Resto</strong></h2>
+        <section class="hero-section-2">
+            <div class="hero-header-2">
+                <h2>Welcome to <strong class="span">The Delice Resto</strong></h2>
+                <h2 class="span">Behind the dishes</h2>
                 <p>Experience the authentic flavors of our exquisite cuisine<br>where every dish is a masterpiece crafted with passion and tradition.</p>
                 <a href="services.html" class="btn-reserve">Reserve a Table</a>
             </div>
         </section>
 
-        <!-- section card -->
-        <section class="menu-info">
-            <div class="menu-wrapper">
-                <div class="menu-images">
-                    <figure>
-                        <img src="images/chicken.jpg" alt="plat culinaire" width="150">
-                    </figure>
-                    <figure>
-                        <img src="images/Noodles.jpg" alt="plat culinaire noodles" width="300" >
-                    </figure>
+            <!-- section card -->
+        <section class="interest-about">
+            <h2>Special Monents</h2>
+            <h3>About Us</h3>
+            <div class="interest-element-about">
+                <div class="card-about">
+                    <img src="images/platsale.png" alt="platsale image" width="250">
                 </div>
-                <div class="menu-contenue">
-                    <h2>Our Menu</h2>
-                    <p>Discover our diverse menu featuring traditional <br>and contemporary dishes made from the freshest ingredients. <br>
-                        Whether you're craving a hearty meal or a light snack, we have something to satisfy every palate.</p>
-                    <a href="services.html" class="btn-menu">Explore Our Menu</a>
-                </div>
-            </div>  
-        </section>
-
-        <!-- section interest -->
-        <section class="interest">
-            <div class="interest-element">
-                <div class="card">
-                    <img src="images/restaurant.png" alt="icon restaurant" width="80">
-                    <h3>Best Atmosphere</h3>
-                    <p>Immerse yourself in a warm and welcoming atmosphere, 
-                        where tasteful décor, soft lighting, and ambient music create the perfect setting to savor every dish.
-                        Whether it's for a romantic dinner, a family outing, or a meal with friends, our team is dedicated to 
-                        making your experience memorable.
+                <div class="cards">
+                    <h3>Tradional & Moderne</h3>
+                    <p>At The Delice Resto, we celebrate authentic flavors and warm hospitality—serving fresh,
+                        affordable meals crafted with passion. Our mission is to create memorable dining experiences
+                        that bring people together over delicious food in a welcoming atmosphere.
                     </p>
                 </div>
-                <div class="card">
-                    <img src="images/fast-food.png" alt="icon fast food" width="80">
-                    <h3>High Food Quality</h3>
-                    <p>We use fresh, locally sourced ingredients and strict preparation standards 
-                        to ensure every dish is flavorful, consistent, and safe for our guests.</p>
-                </div>
-                <div class="card">
-                    <img src="images/budget.png" alt="icon budget" width="80">
-                    <h3>Healtly on a budget</h3>
-                    <p>Enjoy delicious and nutritious meals without breaking the bank. 
-                        Our menu offers a variety of affordable options that cater to different dietary needs and preferences.
-                    </p>
+                <div class="card-about">
+                    <img src="images/platviande.png" alt="platsale image" width="250">
                 </div>
             </div>
         </section>
+
+        <section>
+            <div  class="menu-special">
+                <div class="menu-img"><img src="./images/menu.jpg" alt="picture of menu" width="200"></div>
+                <div class="special">
+                    <h3>Our special</h3>
+                   <div>
+                    <h4>Fines Tartare steak</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                   </div>
+
+                   <div>
+                    <h4>Creamy chicken soup</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                   </div>
+
+                   <div>
+                    <h4>Boiled eggs on toast</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                   </div>
+
+                   <div>
+                    <h4>Risotto & Mushrooms</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                   </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categorieFilter">
+            <ul class="navig">
+                <li><a href="#" data-filter="all">All</a></li>
+                <li><a href="#" data-filter="dessert">Deserts</a></li>
+                <li><a href="#" data-filter="fastfood">Fast-food</a></li>
+                <li><a href="#" data-filter="kids">Kids</a></li>
+            </ul>
+            <h2>Ours Categories</h2>
+            <div id="categories" class="categories">
+                <!-- The categories is inseres by Js -->
+            </div>
+           
+        </section>
+
     </main>
 
     <!-- Stard footer -->
